@@ -31,29 +31,7 @@ namespace Parcial_1
            
         }
        
-        public void MostrarDescendente()
-        {
-            if(inicio == null)
-            {
-                Console.WriteLine("la lista esta vacia");
-            }
-            else
-            {
-                int t = 1;
-                nodo act = new nodo();
-                act = inicio;//Definimos que el apuntador act esta en el primer nodo//     
-
-                // guarda el varlor temporal mente
-                int temp = 0;
-                do
-                {
-                    act = inicio;//aux esta en el primer nodo
-                    nodo siguiente = act.sig;//esta en el siguiente nodo 
-                    while (act.sig != null)
-                    {
-                        if (act.info < siguiente.info) // Compara para luego ordenar
-                        {
-                            temp = act.info;
+       = act.info;
                             act.info = siguiente.info;
                             siguiente.info = temp;
                             act = act.sig;
