@@ -18,58 +18,7 @@ namespace Parcial_1
         public void Insertar()
         {
             
-                nodo auxiliar = new nodo();
-                Console.Write("Digite  el valor a ingresar: ");
-                int elemento = int.Parse(Console.ReadLine());
-                auxiliar.info = elemento;
-                auxiliar.sig = null;
-                if (inicio == null)
-                {
-                    inicio = auxiliar;
-                    inicio.sig = null;
-                    inicio.ant = null;
-                    final = inicio;
-                    Console.WriteLine("Valor ingresado");
-                }
-                else
-                {
-                    if (elemento < inicio.info)
-                    {
-                        auxiliar.sig = inicio;
-                        inicio = auxiliar;
-                    }
-                    else
-                    {
-                        nodo aux = inicio;
-                        nodo aux2 = null;
-                        while (aux.sig != null && aux.sig.info < elemento)
-                        {
-                            aux = aux.sig;
-                        }
-                        //if(aux.sig != null)
-                        //{
-                        //    auxiliar.sig = aux.sig;
-                        //}
-                        //aux.sig = auxiliar;
-                        if (aux.sig == null)
-                        {
-                            aux.sig = auxiliar;
-                            final = auxiliar;
-
-                        }
-                        else if (aux.sig.info >= elemento)
-                        {
-                            aux2 = aux.sig;
-                            auxiliar.sig = aux2;
-                            aux2.ant = auxiliar;
-                            auxiliar.ant = aux;/*aux.sig;*/
-                            aux.sig = auxiliar;
-                        }
-                    }
-                    //final.sig = auxiliar;
-                    //auxiliar.ant = final;
-                    //final = auxiliar;
-                }
+               
 
         }
           
